@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <h1>TIC-TAC-TOE</h1>
+    <section class="instructions">
+        <h3>Instructions</h3>
+        <ol>
+            <li>Select whether you want to play with 
+                the X or O symbol.</li>
+            <li>Try to create a horizontal, vertical or 
+                diagonal line with the chosen symbol.</li>
+            <li>Blocks the attempts of the machine
+                 so that it does not create a line with
+                 the opposite symbol.</li>
+        </ol>
+    </section>
+    <section class="select-options">
+        <h2>Select your symbol</h2>
+        <div class="options-container">
+            <button onclick="playerSelect('X')"><img src="./assets/cross.svg" alt=""></button>
+            <button onclick="playerSelect('O')"><img src="./assets/circle.svg" alt=""></button>
+        </div>
+        <div class="button-play-container">
+            <button class="play-button" onclick="firstPlayer()">Play</button>
+        </div>
+    </section>
+    <section class="main-game">
+        <div class="count">
+            <p>Player: <span id="player-count">0</span></p>
+            <p>CPU: <span id="cpu-count">0</span></p>
+        </div>
+        <div class="game-container">
+            <button onclick="play(1)" id="button1"></button>
+            <button onclick="play(2)" id="button2"></button>
+            <button onclick="play(3)" id="button3"></button>
+            <button onclick="play(4)" id="button4"></button>
+            <button onclick="play(5)" id="button5"></button>
+            <button onclick="play(6)" id="button6"></button>
+            <button onclick="play(7)" id="button7"></button>
+            <button onclick="play(8)" id="button8"></button>
+            <button onclick="play(9)" id="button9"></button>
+        </div>
+        <div class="restart-button-container">
+            <button onclick="restartGame()">Next Game</button>
+            <button onclick="restartAll()">Restart</button>
+        </div>
+    </section>
+    <script src="./src/index.js"></script>
+</body>
+</html>
